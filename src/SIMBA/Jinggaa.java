@@ -9,12 +9,12 @@ package SIMBA;
  *
  * @author USER
  */
-public class JinggaCantiknyaa extends javax.swing.JFrame {
+public class Jinggaa extends javax.swing.JFrame {
 
     /**
-     * Creates new form JinggaCantiknyaa
+     * Creates new form Jinggaa
      */
-    public JinggaCantiknyaa() {
+    public Jinggaa() {
         initComponents();
     }
 
@@ -60,20 +60,20 @@ public class JinggaCantiknyaa extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JinggaCantiknyaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jinggaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JinggaCantiknyaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jinggaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JinggaCantiknyaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jinggaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JinggaCantiknyaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jinggaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JinggaCantiknyaa().setVisible(true);
+                new Jinggaa().setVisible(true);
             }
         });
     }
