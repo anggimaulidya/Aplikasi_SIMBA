@@ -47,7 +47,7 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         jPasswordField2 = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BtnBack = new javax.swing.JButton();
 
         jLabel3.setFont(new java.awt.Font("Swis721 Blk BT", 0, 24)); // NOI18N
         jLabel3.setText("Welcome!");
@@ -99,10 +99,10 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit 20.png"))); // NOI18N
         jButton3.setText("Ubah foto profil");
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 50.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BtnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 50.png"))); // NOI18N
+        BtnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BtnBackActionPerformed(evt);
             }
         });
 
@@ -147,14 +147,14 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
                 .addGap(97, 97, 97))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(BtnBack)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(BtnBack)
                 .addGap(5, 5, 5)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,23 +201,26 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(1267, 1267, 1267)
                 .addComponent(jLabel1)
-                .addContainerGap(127, Short.MAX_VALUE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1394, Short.MAX_VALUE)
+                .addContainerGap(653, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 787, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1936, 1119));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        LoginDanDaftar LoginDanDaftar = new LoginDanDaftar();
+        LoginDanDaftar.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_BtnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,10 +261,10 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnBack;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

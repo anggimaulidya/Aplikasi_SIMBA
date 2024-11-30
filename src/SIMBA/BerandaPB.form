@@ -18,8 +18,10 @@
     </Property>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,95,0,0,7,-112"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
+    <SyntheticProperty name="generateSize" type="boolean" value="true"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -41,28 +43,28 @@
                   <Component id="jPanel3" min="-2" pref="337" max="-2" attributes="0"/>
                   <Component id="jPanel1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" pref="1052" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" pref="1052" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="507" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel2" pref="1069" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="261" max="32767" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel2" pref="825" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -91,13 +93,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton3" min="-2" pref="789" max="-2" attributes="0"/>
+                      <Component id="BtnArtikelSIMBA" min="-2" pref="789" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="jButton4" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="BtnKetersediaanRuang" min="-2" pref="229" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton5" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="BtnDataPasien" min="-2" pref="229" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="jButton6" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="BtnLaporan" min="-2" pref="229" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="146" max="32767" attributes="0"/>
@@ -110,12 +112,12 @@
                   <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="166" max="-2" attributes="0"/>
+                  <Component id="BtnArtikelSIMBA" min="-2" pref="166" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton4" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="jButton5" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="jButton6" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="BtnKetersediaanRuang" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="BtnDataPasien" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="BtnLaporan" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -134,7 +136,7 @@
             <Property name="text" type="java.lang.String" value="Halo, Kartika Putri!"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="BtnArtikelSIMBA">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="99" red="66" type="rgb"/>
@@ -147,8 +149,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Tentang Aplikasi SIMBA"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnArtikelSIMBAActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="BtnKetersediaanRuang">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -162,10 +167,10 @@
             <Property name="text" type="java.lang.String" value="Ketersediaan Ruang"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnKetersediaanRuangActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="BtnDataPasien">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -179,10 +184,10 @@
             <Property name="text" type="java.lang.String" value="Data Pasien"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnDataPasienActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="BtnLaporan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -196,7 +201,7 @@
             <Property name="text" type="java.lang.String" value="Laporan BOR/LOS/TOI"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnLaporanActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -214,8 +219,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" max="32767" attributes="0"/>
-                      <Component id="jButton2" max="32767" attributes="0"/>
+                      <Component id="BtnProfilPetugas" max="32767" attributes="0"/>
+                      <Component id="BtnKeluarAkun" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -225,16 +230,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="BtnProfilPetugas" min="-2" pref="69" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="68" max="-2" attributes="0"/>
+                  <Component id="BtnKeluarAkun" min="-2" pref="68" max="-2" attributes="0"/>
                   <EmptySpace pref="558" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="BtnProfilPetugas">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -247,8 +252,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Profil Petugas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnProfilPetugasActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="BtnKeluarAkun">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Swis721 BT" size="14" style="1"/>
@@ -259,7 +267,7 @@
             <Property name="text" type="java.lang.String" value="Keluar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnKeluarAkunActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

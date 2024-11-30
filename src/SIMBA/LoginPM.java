@@ -5,6 +5,8 @@
  */
 package SIMBA;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author WIN 11
@@ -34,11 +36,12 @@ public class LoginPM extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        BtnKodeID = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BtnPassword = new javax.swing.JPasswordField();
+        BtnMasuk = new javax.swing.JButton();
+        BtnBack = new javax.swing.JButton();
+        BtnHapus = new javax.swing.JButton();
 
         jLabel3.setFont(new java.awt.Font("Swis721 Blk BT", 0, 24)); // NOI18N
         jLabel3.setText("Welcome!");
@@ -60,21 +63,48 @@ public class LoginPM extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
         jLabel7.setText("Kode ID");
 
-        jLabel9.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jLabel9.setText("Password");
-
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        BtnKodeID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                BtnKodeIDActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Masuk");
+        jLabel9.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        jLabel9.setText("Password");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 50.png"))); // NOI18N
+        BtnPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnPasswordActionPerformed(evt);
+            }
+        });
+
+        BtnMasuk.setBackground(new java.awt.Color(0, 102, 102));
+        BtnMasuk.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnMasuk.setForeground(new java.awt.Color(255, 255, 255));
+        BtnMasuk.setText("Masuk");
+        BtnMasuk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMasukActionPerformed(evt);
+            }
+        });
+
+        BtnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 50.png"))); // NOI18N
+        BtnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBackActionPerformed(evt);
+            }
+        });
+
+        BtnHapus.setBackground(new java.awt.Color(255, 255, 255));
+        BtnHapus.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnHapus.setForeground(new java.awt.Color(204, 0, 0));
+        BtnHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Delete 20.png"))); // NOI18N
+        BtnHapus.setText("Hapus");
+        BtnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnHapusActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -90,8 +120,8 @@ public class LoginPM extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7)
                             .addComponent(jLabel9)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1))))
+                            .addComponent(BtnKodeID, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+                            .addComponent(BtnPassword))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -103,17 +133,19 @@ public class LoginPM extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addGap(109, 109, 109))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(285, 285, 285))))
+                                .addComponent(BtnMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(198, 198, 198))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(BtnBack)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2)
+                .addComponent(BtnBack)
                 .addGap(30, 30, 30)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
@@ -121,13 +153,15 @@ public class LoginPM extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnKodeID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
@@ -153,12 +187,68 @@ public class LoginPM extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1936, 1119));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void BtnPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_BtnPasswordActionPerformed
+
+    private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Ya", "Tidak"};
+    int response = JOptionPane.showOptionDialog(
+        this,
+        "Yakin Data Akan Dihapus?", 
+        "Konfirmasi Hapus", 
+        JOptionPane.YES_NO_OPTION, 
+        JOptionPane.QUESTION_MESSAGE,
+        null,
+        options,
+        options[0]
+    );
+
+    // Jika pengguna memilih "Ya"
+    if (response == JOptionPane.YES_OPTION) {
+        // Mengosongkan field ID Petugas dan Password
+        BtnKodeID.setText("");
+        BtnPassword.setText("");
+
+        // Fokuskan kembali ke field ID Petugas (opsional)
+        BtnKodeID.requestFocus();
+    }
+    }//GEN-LAST:event_BtnHapusActionPerformed
+
+    private void BtnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMasukActionPerformed
+        // TODO add your handling code here:
+        if(BtnKodeID.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Harap isi kode petugas dengan benar!");
+            BtnKodeID.requestFocus();
+        }
+        else if (BtnPassword.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Harap isi password dengan benar!");
+            BtnPassword.requestFocus();
+        }
+        else if(BtnKodeID.getText().contains("P-2024-00001") && BtnPassword.getText().contains("12345678")){
+            new BerandaPB().show();
+            this.dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Username atau password tidak sesuai");
+            
+        }
+    }//GEN-LAST:event_BtnMasukActionPerformed
+
+    private void BtnKodeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKodeIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnKodeIDActionPerformed
+
+    private void BtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBackActionPerformed
+        // TODO add your handling code here:
+        LoginDanDaftar LoginDanDaftar = new LoginDanDaftar();
+        LoginDanDaftar.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_BtnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,10 +279,6 @@ public class LoginPM extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -203,8 +289,11 @@ public class LoginPM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BtnBack;
+    private javax.swing.JButton BtnHapus;
+    private javax.swing.JTextField BtnKodeID;
+    private javax.swing.JButton BtnMasuk;
+    private javax.swing.JPasswordField BtnPassword;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -213,7 +302,5 @@ public class LoginPM extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

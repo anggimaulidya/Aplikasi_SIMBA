@@ -31,7 +31,7 @@ public class BerandaPM extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        BtnArtikel = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -53,10 +53,15 @@ public class BerandaPM extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setText("Halo, Nabila Andara!");
 
-        jButton3.setBackground(new java.awt.Color(102, 153, 0));
-        jButton3.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo SIMBA fixx.png"))); // NOI18N
-        jButton3.setText("Tentang Aplikasi SIMBA");
+        BtnArtikel.setBackground(new java.awt.Color(102, 153, 0));
+        BtnArtikel.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnArtikel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo SIMBA fixx.png"))); // NOI18N
+        BtnArtikel.setText("Tentang Aplikasi SIMBA");
+        BtnArtikel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnArtikelActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 102, 102));
         jButton4.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
@@ -89,7 +94,7 @@ public class BerandaPM extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnArtikel, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -102,7 +107,7 @@ public class BerandaPM extends javax.swing.JFrame {
                 .addGap(74, 74, 74)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnArtikel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,10 +202,11 @@ public class BerandaPM extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 825, Short.MAX_VALUE)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1936, 1119));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -214,6 +220,12 @@ public class BerandaPM extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void BtnArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnArtikelActionPerformed
+        // TODO add your handling code here:
+        ArtikelSIMBAPM ArtikelSIMBA = new ArtikelSIMBAPM();
+        ArtikelSIMBA.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_BtnArtikelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,9 +278,9 @@ public class BerandaPM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnArtikel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
