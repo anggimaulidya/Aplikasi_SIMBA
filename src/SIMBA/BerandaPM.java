@@ -33,7 +33,7 @@ public class BerandaPM extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         BtnArtikel = new javax.swing.JButton();
         BtnKetersediaanRuang = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        BtnLaporan = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         BtnProfilPetugas = new javax.swing.JButton();
         BtnKeluar = new javax.swing.JButton();
@@ -73,13 +73,13 @@ public class BerandaPM extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 102, 102));
-        jButton6.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Laporan BOR/LOS/TOI");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BtnLaporan.setBackground(new java.awt.Color(0, 102, 102));
+        BtnLaporan.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnLaporan.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLaporan.setText("Laporan BOR/LOS/TOI");
+        BtnLaporan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BtnLaporanActionPerformed(evt);
             }
         });
 
@@ -98,7 +98,7 @@ public class BerandaPM extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(BtnKetersediaanRuang, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(BtnLaporan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -111,7 +111,7 @@ public class BerandaPM extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnKetersediaanRuang, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -224,9 +224,9 @@ public class BerandaPM extends javax.swing.JFrame {
         LoginKetersediaanRuang.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BtnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLaporanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BtnLaporanActionPerformed
 
     private void BtnArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnArtikelActionPerformed
         // TODO add your handling code here:
@@ -235,7 +235,8 @@ public class BerandaPM extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnArtikelActionPerformed
 
     private void BtnProfilPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfilPetugasActionPerformed
-        // TODO add your handling code here:
+        TampilanProfil TampilanProfil = new TampilanProfil();
+        TampilanProfil.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnProfilPetugasActionPerformed
 
     /**
@@ -292,8 +293,8 @@ public class BerandaPM extends javax.swing.JFrame {
     private javax.swing.JButton BtnArtikel;
     private javax.swing.JButton BtnKeluar;
     private javax.swing.JButton BtnKetersediaanRuang;
+    private javax.swing.JButton BtnLaporan;
     private javax.swing.JButton BtnProfilPetugas;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

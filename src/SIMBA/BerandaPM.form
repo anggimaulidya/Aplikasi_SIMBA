@@ -97,7 +97,7 @@
                       <Group type="102" attributes="0">
                           <Component id="BtnKetersediaanRuang" min="-2" pref="399" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton6" max="32767" attributes="0"/>
+                          <Component id="BtnLaporan" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="164" max="32767" attributes="0"/>
@@ -114,7 +114,7 @@
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="BtnKetersediaanRuang" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="jButton6" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="BtnLaporan" alignment="3" min="-2" pref="194" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -167,7 +167,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnKetersediaanRuangActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="BtnLaporan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -181,7 +181,7 @@
             <Property name="text" type="java.lang.String" value="Laporan BOR/LOS/TOI"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnLaporanActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
