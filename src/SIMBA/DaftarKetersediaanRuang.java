@@ -233,19 +233,23 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnVVIPActionPerformed
 
     private void BtnVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVIPActionPerformed
-        // TODO add your handling code here:
+        RuangVIP LoginTabelKetersediaanRuang = new RuangVIP();
+       LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); // TODO add your handling code here:
     }//GEN-LAST:event_BtnVIPActionPerformed
 
     private void BtnKelas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas1ActionPerformed
-        // TODO add your handling code here:
+        RuangKelas1 LoginTabelKetersediaanRuang = new RuangKelas1();
+       LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_BtnKelas1ActionPerformed
 
     private void BtnKelas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas2ActionPerformed
-        // TODO add your handling code here:
+        RuangKelas2 LoginTabelKetersediaanRuang = new RuangKelas2();
+       LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_BtnKelas2ActionPerformed
 
     private void BtnKelas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas3ActionPerformed
-        // TODO add your handling code here:
+       RuangKelas3 LoginTabelKetersediaanRuang = new RuangKelas3();
+       LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_BtnKelas3ActionPerformed
 
     private void BtnBerandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBerandaActionPerformed
