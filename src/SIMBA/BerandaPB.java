@@ -239,7 +239,8 @@ public class BerandaPB extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
     private void BtnDataPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDataPasienActionPerformed
-        // TODO add your handling code here:
+      DataPasien DataPasien = new DataPasien();
+        DataPasien.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnDataPasienActionPerformed
 
     private void BtnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLaporanActionPerformed
