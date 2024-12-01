@@ -236,7 +236,7 @@ public class BerandaPB extends javax.swing.JFrame {
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
     DaftarKetersediaanRuang LoginDaftarKetersediaanRuang = new DaftarKetersediaanRuang();
-    LoginDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    LoginDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);        //
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
     private void BtnDataPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDataPasienActionPerformed
