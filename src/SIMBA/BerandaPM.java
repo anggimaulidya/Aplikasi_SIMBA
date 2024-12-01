@@ -215,8 +215,8 @@ public class BerandaPM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKeluarActionPerformed
-        Keluar LoginKeluar = new Keluar();
-        LoginKeluar.setVisible(rootPaneCheckingEnabled);
+        LoginDanDaftar LoginDanDaftar = new LoginDanDaftar();
+        LoginDanDaftar.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnKeluarActionPerformed
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
