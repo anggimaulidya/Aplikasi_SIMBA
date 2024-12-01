@@ -245,7 +245,8 @@ public class BerandaPB extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnDataPasienActionPerformed
 
     private void BtnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLaporanActionPerformed
-        // TODO add your handling code here:
+       Laporan Laporan = new Laporan();
+        Laporan.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnLaporanActionPerformed
 
     private void BtnProfilPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfilPetugasActionPerformed
