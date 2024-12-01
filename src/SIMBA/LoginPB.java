@@ -208,22 +208,30 @@ public class LoginPB extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void BtnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMasukActionPerformed
-        if(BtnKodeID.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Harap isi kode petugas dengan benar!");
-            BtnKodeID.requestFocus();
-        }
-        else if (BtnPassword.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Harap isi password dengan benar!");
-            BtnPassword.requestFocus();
-        }
-        else if(BtnKodeID.getText().contains("P-2024-00001") && BtnPassword.getText().contains("12345678")){
-            new BerandaPB().show();
-            this.dispose();
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Username atau password tidak sesuai");
-            
-        }
+    if (BtnKodeID.getText().equals("")) {
+    JOptionPane.showMessageDialog(null, "Harap isi kode petugas dengan benar!");
+    BtnKodeID.requestFocus();
+} else if (BtnPassword.getText().equals("")) {
+    JOptionPane.showMessageDialog(null, "Harap isi password dengan benar!");
+    BtnPassword.requestFocus();
+} else if (
+    (BtnKodeID.getText().equals("P-2024-00001") && BtnPassword.getText().equals("password1")) ||
+    (BtnKodeID.getText().equals("P-2024-00002") && BtnPassword.getText().equals("password2")) ||
+    (BtnKodeID.getText().equals("P-2024-00003") && BtnPassword.getText().equals("password3")) ||
+    (BtnKodeID.getText().equals("P-2024-00004") && BtnPassword.getText().equals("password4")) ||
+    (BtnKodeID.getText().equals("P-2024-00005") && BtnPassword.getText().equals("password5")) ||
+    (BtnKodeID.getText().equals("P-2024-00006") && BtnPassword.getText().equals("password6")) ||
+    (BtnKodeID.getText().equals("P-2024-00007") && BtnPassword.getText().equals("password7")) ||
+    (BtnKodeID.getText().equals("P-2024-00008") && BtnPassword.getText().equals("password8")) ||
+    (BtnKodeID.getText().equals("P-2024-00009") && BtnPassword.getText().equals("password9")) ||
+    (BtnKodeID.getText().equals("P-2024-00010") && BtnPassword.getText().equals("password10"))
+) {
+    new BerandaPB().show();
+    this.dispose();
+} else {
+    JOptionPane.showMessageDialog(null, "Username atau password tidak sesuai");
+}
+
     }//GEN-LAST:event_BtnMasukActionPerformed
 
     private void BtnKodeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKodeIDActionPerformed

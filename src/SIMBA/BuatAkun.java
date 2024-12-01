@@ -9,13 +9,28 @@ package SIMBA;
  *
  * @author WIN 11
  */
-public class DaftarBuatAkun extends javax.swing.JFrame {
+import java.sql.*;
+import javax.swing.JOptionPane;
+public class BuatAkun extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginDanDaftar_1
      */
-    public DaftarBuatAkun() {
+    public Statement st;
+    public ResultSet rs;
+    Connection cn = Koneksi.KoneksiDatabase.BukaKoneksi();
+    public BuatAkun() {
         initComponents();
+    }
+    
+    private void Bersih(){
+        txtNamaLengkap.setText("");
+        txtKodeID.setText("");
+        txtJabatan.setText("");
+        txtEmail.setText("");
+        txtTelepon.setText("");
+        txtPassword.setText("");
+        
     }
 
     /**
@@ -32,20 +47,20 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtNamaLengkap = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BtnHapus = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
+        txtKodeID = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtJabatan = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtTelepon = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
+        BtnBuatAkun = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         BtnBack = new javax.swing.JButton();
 
@@ -69,11 +84,16 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
         jLabel9.setText("Kode ID");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Delete 20.png"))); // NOI18N
-        jButton1.setText("Hapus");
+        BtnHapus.setBackground(new java.awt.Color(0, 102, 102));
+        BtnHapus.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnHapus.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Delete 20.png"))); // NOI18N
+        BtnHapus.setText("Hapus");
+        BtnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnHapusActionPerformed(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Profil 400.png"))); // NOI18N
 
@@ -89,10 +109,15 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
         jLabel13.setText("Password");
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
-        jButton2.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Masuk");
+        BtnBuatAkun.setBackground(new java.awt.Color(0, 102, 102));
+        BtnBuatAkun.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnBuatAkun.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBuatAkun.setText("Buat Akun");
+        BtnBuatAkun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuatAkunActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Swis721 BT", 0, 14)); // NOI18N
@@ -116,26 +141,26 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNamaLengkap, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKodeID, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel12)
                             .addComponent(jLabel13)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPasswordField2)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtPassword)
+                                .addComponent(txtTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(304, 304, 304)
                                 .addComponent(jLabel5))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(363, 363, 363)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(BtnBuatAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,30 +192,30 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnBuatAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNamaLengkap, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtKodeID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(68, 68, 68))
         );
 
@@ -222,6 +247,78 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         LoginDanDaftar.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnBackActionPerformed
 
+    private void BtnBuatAkunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuatAkunActionPerformed
+        // TODO add your handling code here:
+        try {
+    st = cn.createStatement();
+    if (txtNamaLengkap.getText().equals("") ||
+        txtKodeID.getText().equals("") ||
+        txtJabatan.getText().equals("") ||
+        txtEmail.getText().equals("") ||
+        txtTelepon.getText().equals("") ||
+        txtPassword.getText().equals("")) {
+        
+        JOptionPane.showMessageDialog(null, "Data tidak boleh kosong", "Validasi Data", JOptionPane.INFORMATION_MESSAGE);
+        return;
+    }
+    
+    // Aksi simpan data
+    if (BtnBuatAkun.getText().equals("Buat Akun")) {
+        String cek = "SELECT * FROM daftar_petugas WHERE `Kode_ID` = '" + txtKodeID.getText() + "'";
+        rs = st.executeQuery(cek);
+        
+        if (rs.next()) {
+            JOptionPane.showMessageDialog(null, "Ups...Kode ID ini sudah terdaftar");
+        } else {
+            String sql = "INSERT INTO daftar_petugas VALUES ('" + txtKodeID.getText() +
+                         "', '" + txtNamaLengkap.getText() +
+                         "', '" + txtJabatan.getText() +
+                         "', '" + txtEmail.getText() +
+                         "', '" + txtTelepon.getText() +
+                         "', '" + txtPassword.getText() + "')";
+            st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+        }
+    } else {
+        // Aksi ubah data
+    }
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(null, "Terjadi kesalahan: " + e.getMessage());
+    e.printStackTrace();
+}
+        
+    }//GEN-LAST:event_BtnBuatAkunActionPerformed
+
+    private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Ya", "Tidak"};
+    int response = JOptionPane.showOptionDialog(
+        this,
+        "Yakin Data Akan Dihapus?", 
+        "Konfirmasi Hapus", 
+        JOptionPane.YES_NO_OPTION, 
+        JOptionPane.QUESTION_MESSAGE,
+        null,
+        options,
+        options[0]
+    );
+
+    // Jika pengguna memilih "Ya"
+    if (response == JOptionPane.YES_OPTION) {
+        // Mengosongkan field ID Petugas dan Password
+        txtNamaLengkap.setText("");
+        txtKodeID.setText("");
+        txtJabatan.setText("");
+        txtEmail.setText("");
+        txtTelepon.setText("");
+        txtPassword.setText("");
+        
+
+        // Fokuskan kembali ke field ID Petugas (opsional)
+        txtNamaLengkap.requestFocus();
+    }
+    }//GEN-LAST:event_BtnHapusActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,14 +336,18 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DaftarBuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DaftarBuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DaftarBuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DaftarBuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuatAkun.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -255,15 +356,15 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DaftarBuatAkun().setVisible(true);
+                new BuatAkun().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBack;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BtnBuatAkun;
+    private javax.swing.JButton BtnHapus;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -276,11 +377,11 @@ public class DaftarBuatAkun extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtJabatan;
+    private javax.swing.JTextField txtKodeID;
+    private javax.swing.JTextField txtNamaLengkap;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtTelepon;
     // End of variables declaration//GEN-END:variables
 }

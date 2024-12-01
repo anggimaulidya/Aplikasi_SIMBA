@@ -174,7 +174,7 @@ public class LoginDanDaftar extends javax.swing.JFrame {
 
     private void btnBuatAkunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuatAkunActionPerformed
         // TODO add your handling code here:
-        DaftarBuatAkun DaftarBuatAkun = new DaftarBuatAkun();
+        BuatAkun DaftarBuatAkun = new BuatAkun();
         DaftarBuatAkun.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnBuatAkunActionPerformed
 
