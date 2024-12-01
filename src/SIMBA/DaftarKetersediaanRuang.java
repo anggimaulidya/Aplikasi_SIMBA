@@ -253,8 +253,8 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnKelas3ActionPerformed
 
     private void BtnBerandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBerandaActionPerformed
-       BerandaPB BerandaPB = new BerandaPB();
-        BerandaPB.setVisible(rootPaneCheckingEnabled);
+       DaftarKetersediaanRuang BerandaDaftarKetersediaanRuang = new DaftarKetersediaanRuang();
+        BerandaDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnBerandaActionPerformed
 
     /**
