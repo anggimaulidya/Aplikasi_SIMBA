@@ -228,7 +228,7 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnVVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVVIPActionPerformed
-       TabelKetersediaanRuang LoginTabelKetersediaanRuang = new TabelKetersediaanRuang();
+       RuangVVIP LoginTabelKetersediaanRuang = new RuangVVIP();
        LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_BtnVVIPActionPerformed
 

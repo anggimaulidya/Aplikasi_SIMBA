@@ -220,7 +220,7 @@ public class BerandaPM extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnKeluarActionPerformed
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
-       TabelKetersediaanRuang LoginKetersediaanRuang = new TabelKetersediaanRuang();
+       RuangVVIP LoginKetersediaanRuang = new RuangVVIP();
         LoginKetersediaanRuang.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
