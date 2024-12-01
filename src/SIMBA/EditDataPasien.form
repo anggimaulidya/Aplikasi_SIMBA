@@ -92,11 +92,11 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jSpinner1" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="SpinnerHariMasuk" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jSpinner2" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="SpinnerBulanMasuk" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jSpinner3" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="SpinnerTahunMasuk" min="-2" pref="43" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -118,11 +118,11 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jSpinner4" min="-2" pref="43" max="-2" attributes="0"/>
+                                              <Component id="SpinnerHariKeluar" min="-2" pref="43" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSpinner5" min="-2" pref="43" max="-2" attributes="0"/>
+                                              <Component id="SpinnerBulanKeluar" min="-2" pref="43" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSpinner6" min="-2" pref="43" max="-2" attributes="0"/>
+                                              <Component id="SpinnerTahunKeluar" min="-2" pref="43" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
@@ -194,9 +194,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerHariMasuk" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerBulanMasuk" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerTahunMasuk" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -209,9 +209,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jSpinner4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerHariKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerBulanKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SpinnerTahunKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -239,7 +239,7 @@
             <Property name="text" type="java.lang.String" value="Data Pasien"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner3">
+        <Component class="javax.swing.JSpinner" name="SpinnerTahunMasuk">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">
           <Properties>
@@ -249,7 +249,7 @@
             <Property name="text" type="java.lang.String" value="Keluar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner4">
+        <Component class="javax.swing.JSpinner" name="SpinnerHariKeluar">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
@@ -267,7 +267,7 @@
             <Property name="text" type="java.lang.String" value="Bulan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner5">
+        <Component class="javax.swing.JSpinner" name="SpinnerBulanKeluar">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
@@ -277,7 +277,7 @@
             <Property name="text" type="java.lang.String" value="Tahun"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner6">
+        <Component class="javax.swing.JSpinner" name="SpinnerTahunKeluar">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -319,7 +319,10 @@
             <Property name="text" type="java.lang.String" value="Ruangan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner1">
+        <Component class="javax.swing.JSpinner" name="SpinnerHariMasuk">
+          <Events>
+            <EventHandler event="ancestorRemoved" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="SpinnerHariMasukAncestorRemoved"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
@@ -337,7 +340,7 @@
             <Property name="text" type="java.lang.String" value="Bulan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner2">
+        <Component class="javax.swing.JSpinner" name="SpinnerBulanMasuk">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
