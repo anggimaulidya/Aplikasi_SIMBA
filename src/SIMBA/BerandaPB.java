@@ -235,7 +235,8 @@ public class BerandaPB extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnKeluarAkunActionPerformed
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
-        // TODO add your handling code here:
+    DaftarKetersediaanRuang LoginDaftarKetersediaanRuang = new DaftarKetersediaanRuang();
+    LoginDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
     private void BtnDataPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDataPasienActionPerformed
