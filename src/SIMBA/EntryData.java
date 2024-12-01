@@ -1,22 +1,14 @@
 package SIMBA;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import SIMBA.*;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author WIN 11
- */
+
 public class EntryData extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginDanDaftar_1
-     */
+    
     public EntryData() {
         initComponents();
     }
@@ -53,14 +45,14 @@ public class EntryData extends javax.swing.JFrame {
         jSpinner2 = new javax.swing.JSpinner();
         jLabel16 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        BtnHapus = new javax.swing.JButton();
+        BtnSimpan = new javax.swing.JButton();
+        BtnNamaPasien = new javax.swing.JTextField();
+        BtnNoRM = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BtnKembali = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -123,16 +115,38 @@ public class EntryData extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 102, 102));
-        jButton4.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Delete 20.png"))); // NOI18N
-        jButton4.setText("Hapus");
+        BtnHapus.setBackground(new java.awt.Color(0, 102, 102));
+        BtnHapus.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnHapus.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Delete 20.png"))); // NOI18N
+        BtnHapus.setText("Hapus");
+        BtnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnHapusActionPerformed(evt);
+            }
+        });
 
-        jButton5.setBackground(new java.awt.Color(0, 102, 102));
-        jButton5.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Simpan");
+        BtnSimpan.setBackground(new java.awt.Color(0, 102, 102));
+        BtnSimpan.setFont(new java.awt.Font("Swis721 BT", 1, 18)); // NOI18N
+        BtnSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        BtnSimpan.setText("Simpan");
+        BtnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSimpanActionPerformed(evt);
+            }
+        });
+
+        BtnNamaPasien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnNamaPasienActionPerformed(evt);
+            }
+        });
+
+        BtnNoRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnNoRMActionPerformed(evt);
+            }
+        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VVIP", "VIP", "Kelas 1", "Kelas 2", "Kelas 3" }));
 
@@ -153,9 +167,9 @@ public class EntryData extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -192,8 +206,8 @@ public class EntryData extends javax.swing.JFrame {
                                 .addComponent(jLabel19)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel20))))
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
+                    .addComponent(BtnNamaPasien)
+                    .addComponent(BtnNoRM)
                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(275, Short.MAX_VALUE))
         );
@@ -205,11 +219,11 @@ public class EntryData extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnNamaPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
                 .addGap(9, 9, 9)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnNoRM, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -246,21 +260,21 @@ public class EntryData extends javax.swing.JFrame {
                             .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 30.png"))); // NOI18N
-        jButton1.setText("Kembali");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnKembali.setBackground(new java.awt.Color(255, 255, 255));
+        BtnKembali.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
+        BtnKembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Back 30.png"))); // NOI18N
+        BtnKembali.setText("Kembali");
+        BtnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnKembaliActionPerformed(evt);
             }
         });
 
@@ -270,14 +284,14 @@ public class EntryData extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(637, Short.MAX_VALUE))
         );
 
@@ -338,13 +352,49 @@ public class EntryData extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKembaliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnKembaliActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void BtnNoRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnNoRMActionPerformed
+
+    private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSimpanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnSimpanActionPerformed
+
+    private void BtnNamaPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNamaPasienActionPerformed
+        
+    }//GEN-LAST:event_BtnNamaPasienActionPerformed
+
+    private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
+       Object[] options = {"Ya", "Tidak"};
+    int response = JOptionPane.showOptionDialog(
+        this,
+        "Yakin Data Akan Dihapus?", 
+        "Konfirmasi Hapus", 
+        JOptionPane.YES_NO_OPTION, 
+        JOptionPane.QUESTION_MESSAGE,
+        null,
+        options,
+        options[0]
+    );
+    
+    // Jika pengguna memilih "Ya"
+    if (response == JOptionPane.YES_OPTION) {
+        // Mengosongkan field ID Petugas dan Password
+        BtnNamaPasien.setText("");
+        BtnNoRM.setText("");
+
+        // Fokuskan kembali ke field ID Petugas (opsional)
+        BtnNoRM.requestFocus();
+    }                                 
+    }//GEN-LAST:event_BtnHapusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1405,10 +1455,12 @@ public class EntryData extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BtnHapus;
+    private javax.swing.JButton BtnKembali;
+    private javax.swing.JTextField BtnNamaPasien;
+    private javax.swing.JTextField BtnNoRM;
+    private javax.swing.JButton BtnSimpan;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -1436,7 +1488,5 @@ public class EntryData extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner4;
     private javax.swing.JSpinner jSpinner5;
     private javax.swing.JSpinner jSpinner6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
