@@ -31,7 +31,7 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        BtnVVIP = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -54,13 +54,13 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setText("Ketersediaan Ruang");
 
-        jButton4.setBackground(new java.awt.Color(102, 153, 0));
-        jButton4.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton4.setText("VVIP");
-        jButton4.setToolTipText("");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BtnVVIP.setBackground(new java.awt.Color(102, 153, 0));
+        BtnVVIP.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnVVIP.setText("VVIP");
+        BtnVVIP.setToolTipText("");
+        BtnVVIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BtnVVIPActionPerformed(evt);
             }
         });
 
@@ -108,7 +108,7 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
                 .addGap(92, 92, 92)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnVVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -131,7 +131,7 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnVVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -227,9 +227,10 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void BtnVVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVVIPActionPerformed
+       TabelKetersediaanRuang LoginTabelKetersediaanRuang = new TabelKetersediaanRuang();
+       LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
+    }//GEN-LAST:event_BtnVVIPActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -350,8 +351,8 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnVVIP;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
