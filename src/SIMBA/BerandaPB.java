@@ -236,12 +236,12 @@ public class BerandaPB extends javax.swing.JFrame {
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
     DaftarKetersediaanRuang LoginDaftarKetersediaanRuang = new DaftarKetersediaanRuang();
-    LoginDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);        //
+    LoginDaftarKetersediaanRuang.setVisible(rootPaneCheckingEnabled);       
     }//GEN-LAST:event_BtnKetersediaanRuangActionPerformed
 
     private void BtnDataPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDataPasienActionPerformed
       DataPasien DataPasien = new DataPasien();
-        DataPasien.setVisible(rootPaneCheckingEnabled);
+      DataPasien.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnDataPasienActionPerformed
 
     private void BtnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLaporanActionPerformed
