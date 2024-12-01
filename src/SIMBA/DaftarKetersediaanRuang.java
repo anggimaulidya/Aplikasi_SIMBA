@@ -32,12 +32,12 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         BtnVVIP = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        BtnVIP = new javax.swing.JButton();
+        BtnKelas1 = new javax.swing.JButton();
+        BtnKelas2 = new javax.swing.JButton();
+        BtnKelas3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BtnBeranda = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -64,39 +64,39 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(102, 153, 0));
-        jButton6.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton6.setText("VIP");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BtnVIP.setBackground(new java.awt.Color(102, 153, 0));
+        BtnVIP.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnVIP.setText("VIP");
+        BtnVIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BtnVIPActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(102, 153, 0));
-        jButton5.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton5.setText("Kelas 1");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BtnKelas1.setBackground(new java.awt.Color(102, 153, 0));
+        BtnKelas1.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnKelas1.setText("Kelas 1");
+        BtnKelas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BtnKelas1ActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(102, 153, 0));
-        jButton7.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton7.setText("Kelas 2");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        BtnKelas2.setBackground(new java.awt.Color(102, 153, 0));
+        BtnKelas2.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnKelas2.setText("Kelas 2");
+        BtnKelas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                BtnKelas2ActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(102, 153, 0));
-        jButton8.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
-        jButton8.setText("Kelas 3");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        BtnKelas3.setBackground(new java.awt.Color(102, 153, 0));
+        BtnKelas3.setFont(new java.awt.Font("Swis721 BT", 1, 24)); // NOI18N
+        BtnKelas3.setText("Kelas 3");
+        BtnKelas3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                BtnKelas3ActionPerformed(evt);
             }
         });
 
@@ -110,14 +110,14 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(BtnVVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnKelas1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnKelas2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnKelas3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(156, 156, 156))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(267, 267, 267)
@@ -132,24 +132,24 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnVVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnVIP, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnKelas2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnKelas1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnKelas3, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Home 40.png"))); // NOI18N
-        jButton1.setText("Beranda");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnBeranda.setBackground(new java.awt.Color(255, 255, 255));
+        BtnBeranda.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
+        BtnBeranda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Home 40.png"))); // NOI18N
+        BtnBeranda.setText("Beranda");
+        BtnBeranda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnBerandaActionPerformed(evt);
             }
         });
 
@@ -159,14 +159,14 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnBeranda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(637, Short.MAX_VALUE))
         );
 
@@ -232,26 +232,26 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
        LoginTabelKetersediaanRuang.setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_BtnVVIPActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BtnVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVIPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BtnVIPActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void BtnKelas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_BtnKelas1ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void BtnKelas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_BtnKelas2ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void BtnKelas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKelas3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_BtnKelas3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnBerandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBerandaActionPerformed
        BerandaPB BerandaPB = new BerandaPB();
         BerandaPB.setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnBerandaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -352,12 +352,12 @@ public class DaftarKetersediaanRuang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnBeranda;
+    private javax.swing.JButton BtnKelas1;
+    private javax.swing.JButton BtnKelas2;
+    private javax.swing.JButton BtnKelas3;
+    private javax.swing.JButton BtnVIP;
     private javax.swing.JButton BtnVVIP;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
