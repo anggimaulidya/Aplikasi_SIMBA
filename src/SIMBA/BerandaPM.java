@@ -121,6 +121,11 @@ public class BerandaPM extends javax.swing.JFrame {
         BtnProfilPetugas.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
         BtnProfilPetugas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Profil 40.png"))); // NOI18N
         BtnProfilPetugas.setText("Profil Petugas");
+        BtnProfilPetugas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnProfilPetugasActionPerformed(evt);
+            }
+        });
 
         BtnKeluar.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
         BtnKeluar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout 40.png"))); // NOI18N
@@ -210,7 +215,8 @@ public class BerandaPM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKeluarActionPerformed
-        // TODO add your handling code here:
+        Keluar LoginKeluar = new Keluar();
+        LoginKeluar.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnKeluarActionPerformed
 
     private void BtnKetersediaanRuangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKetersediaanRuangActionPerformed
@@ -227,6 +233,10 @@ public class BerandaPM extends javax.swing.JFrame {
         ArtikelSIMBAPM ArtikelSIMBA = new ArtikelSIMBAPM();
         ArtikelSIMBA.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnArtikelActionPerformed
+
+    private void BtnProfilPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfilPetugasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnProfilPetugasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,4 +302,14 @@ public class BerandaPM extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+    private static class Keluar {
+
+        public Keluar() {
+        }
+
+        private void setVisible(boolean rootPaneCheckingEnabled) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
 }
