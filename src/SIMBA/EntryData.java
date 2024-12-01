@@ -353,7 +353,8 @@ public class EntryData extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKembaliActionPerformed
-        
+       BerandaPB BerandaPB = new BerandaPB();
+       BerandaPB.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_BtnKembaliActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
