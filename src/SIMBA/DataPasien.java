@@ -53,7 +53,7 @@ public class DataPasien extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        BtnTambahPasien = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -149,10 +149,15 @@ public class DataPasien extends javax.swing.JFrame {
 
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit 10.png"))); // NOI18N
 
-        jButton16.setBackground(new java.awt.Color(0, 102, 102));
-        jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(255, 255, 255));
-        jButton16.setText("Tambah Data Pasien");
+        BtnTambahPasien.setBackground(new java.awt.Color(0, 102, 102));
+        BtnTambahPasien.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BtnTambahPasien.setForeground(new java.awt.Color(255, 255, 255));
+        BtnTambahPasien.setText("Tambah Data Pasien");
+        BtnTambahPasien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTambahPasienActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -202,7 +207,7 @@ public class DataPasien extends javax.swing.JFrame {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
-                    .addComponent(jButton16))
+                    .addComponent(BtnTambahPasien))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -214,7 +219,7 @@ public class DataPasien extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(98, 98, 98))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnTambahPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,6 +354,12 @@ public class DataPasien extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void BtnTambahPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahPasienActionPerformed
+        // TODO add your handling code here:
+        EntryData EntryData = new EntryData();
+        EntryData.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_BtnTambahPasienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -513,6 +524,7 @@ public class DataPasien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnTambahPasien;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -520,7 +532,6 @@ public class DataPasien extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
